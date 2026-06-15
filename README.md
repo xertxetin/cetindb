@@ -3,9 +3,9 @@
   <h1>CetinDB Network Core</h1>
   <p><em>The Next Generation P2P Database & Edge Computing Protocol</em></p>
 
-  [![Status](https://img.shields.io/badge/Status-Active_Development-00ED64?style=for-the-badge)](https://cetindb.com)
-  [![Network](https://img.shields.io/badge/Network-Distributed_DAG-111111?style=for-the-badge)](#)
-  [![Cryptography](https://img.shields.io/badge/Cryptography-Schnorr_%7C_NIP44-663399?style=for-the-badge)](#)
+  [![Status](https://img.shields.io/badge/Status-Active_Development-00ED64?style=for-the-badge)](https://meforcetechnology.com)
+  [![Network](https://img.shields.io/badge/Network-Distributed_DAG-111111?style=for-the-badge)](https://www.meforcetechnology.com/cetindb/#/docs)
+  [![Cryptography](https://img.shields.io/badge/Cryptography-Schnorr_%7C_NIP44-663399?style=for-the-badge)](https://www.meforcetechnology.com/cetindb/#/docs)
 </div>
 
 ---
@@ -37,9 +37,9 @@ CetinDB is engineered using a proprietary blend of cutting-edge distributed syst
 * **NIP-44 End-to-End Encryption:** Leveraging `XChaCha20-Poly1305` to ensure all peer-to-peer data transfers are strictly confidential.
 * **Zero-Knowledge Capabilities:** The architecture is designed to support advanced privacy-preserving protocols natively.
 
-### 🗄️ 4. Hybrid Storage Engine
-* **Web:** Uses high-performance IndexedDB pipelines for lightweight, in-browser edge caching.
-* **Desktop/Server:** Utilizes raw `LevelDB` for unbounded hardware-level read/write capacity, handling massive multidimensional chain data with sub-millisecond query latency (`rpc-chaindata`).
+### 🗄️ 4. Flawless Storage Engine
+* **Desktop/Server OS Integration:** CetinDB completely bypasses the limitations of web browsers. It explicitly does not use IndexedDB or in-browser local storage solutions, ensuring there are absolutely zero bottlenecks.
+* **Unbounded Performance:** Utilizes raw `LevelDB` for unbounded hardware-level read/write capacity, handling massive multidimensional chain data with sub-millisecond query latency (`rpc-chaindata`), securing its position as the most powerful and flawless database engine ever engineered.
 
 ---
 
@@ -78,12 +78,17 @@ import { CetinDB } from '@meforce/cetindb-core';
 
 // Initialize the edge engine
 const db = new CetinDB({
-  network: 'cetindb_mainnet',
-  relayUrls: ['wss://hub.cetindb.network']
+  network: 'cetindb_v3_mainnet',
+  database: 'enterprise_production_db',
+  relays: ['wss://hub.cetindb.network']
 });
 
 // Authenticate securely
-await db.login(privateKeyHex);
+await db.login({
+  username: process.env.CETINDB_USER_ID,
+  password: process.env.CETINDB_SECRET_KEY,
+  hxKey: process.env.CETINDB_HX_KEY // Your cryptographic identity signature
+});
 
 // Broadcast an encrypted event natively to the DAG
 await db.publish({
@@ -98,11 +103,22 @@ CetinDB enforces strict isolation between deployment stages:
 * **`cetindb_testnet_01`**: A chaotic, developer-friendly ecosystem for unmetered load testing, smart-contract formulation, and rapid prototyping.
 * **`cetindb_v3_mainnet`**: The production-grade, immutable global ledger. Only rigorously audited and cryptographically valid data structures are permitted.
 
+### 📡 About WSS Sync Relays
+CetinDB utilizes a decentralized mesh of WebSocket Secure (WSS) relays to broker peer-to-peer connections and maintain asynchronous state. 
+
+**Important Note on Relays:**
+If you see community relays (such as `wss://relay.damus.io` or `wss://nos.lol`) in our boilerplate or demo applications, understand that they are configured **purely for educational and testing purposes**. MeForce Technology does not own, endorse, or guarantee the uptime of these third-party trackers. For production applications, we require developers to deploy and secure their own WSS relay infrastructure (using open-source Nostr-compliant relay software like `strfry`).
+
 ---
 
 <div align="center">
-  <p><b>CetinDB</b> • Engineered by <b>MeForce Technology</b>.</p>
-  <p><i>Building the Unstoppable Web.</i></p>
+  <p><b>CetinDB</b> • Engineered with precision by <b>MeForce Technology</b>.</p>
+  <p><i>Building the Unbreakable Mesh.</i></p>
   <br/>
-  <p><a href="#">Website</a> • <a href="#">Twitter/X</a> • <a href="#">Documentation</a></p>
+  <p>
+    <a href="https://meforcetechnology.com"><b>Website</b></a> • 
+    <a href="https://x.com/xertxetin"><b>Twitter/X</b></a> • 
+    <a href="https://www.instagram.com/xertxetin/"><b>Instagram</b></a> • 
+    <a href="https://www.meforcetechnology.com/cetindb/#/docs"><b>Documentation</b></a>
+  </p>
 </div>
