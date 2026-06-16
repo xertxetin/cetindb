@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/network.svg" width="120" alt="CetinDB Network Logo" />
+  <img src="https://raw.githubusercontent.com/xertxetin/cetindb/refs/heads/main/media/cetindb-logo.jpg" width="120" alt="CetinDB Network Logo" />
   <h1>CetinDB Network Core</h1>
   <p><em>The Next Generation P2P Database & Edge Computing Protocol</em></p>
 
-  [![Status](https://img.shields.io/badge/Status-Active_Development-00ED64?style=for-the-badge)](https://meforcetechnology.com)
-  [![Network](https://img.shields.io/badge/Network-Distributed_DAG-111111?style=for-the-badge)](https://www.meforcetechnology.com/cetindb/#/docs)
-  [![Cryptography](https://img.shields.io/badge/Cryptography-Schnorr_%7C_NIP44-663399?style=for-the-badge)](https://www.meforcetechnology.com/cetindb/#/docs)
+  [![Status](https://img.shields.io/badge/Status-Active_Development-00ED64?style=for-the-badge)](https://github.com/xertxetin/cetindb)
+  [![Network](https://img.shields.io/badge/Network-Distributed_DAG-111111?style=for-the-badge)](https://github.com/xertxetin/cetindb)
+  [![Cryptography](https://img.shields.io/badge/Cryptography-Schnorr_%7C_NIP44-663399?style=for-the-badge)](https://github.com/xertxetin/cetindb)
 </div>
 
 ---
@@ -58,23 +58,23 @@ CetinDB awakens this sleeping computing power, weaving it into a resilient, unst
 
 ## 🏢 Who Are We?
 
-CetinDB is the flagship protocol architected and developed by **MeForce Technology**.
+CetinDB is the flagship protocol architected and developed by **Mert Cetin**.
 
 We are a hyper-focused team of distributed systems engineers, cryptographers, and protocol designers obsessed with building the ultimate decentralized database. Our philosophy is rooted in **Craftsmanship, Autonomy, and Performance.** We don't build generic software; we engineer elegant, high-throughput engines that challenge the status quo of modern cloud computing.
 
-**MeForce Technology** is dedicated to transforming every browser and device into the backbone of a self-sovereign web.
+**Mert Cetin** is dedicated to transforming every browser and device into the backbone of a self-sovereign web.
 
 ---
 
 ## 📖 Technical Documentation & Integration
 
-*Note: The core CetinDB engine is currently a closed-source proprietary protocol while in active enterprise development. The documentation below outlines the conceptual interface for future integrators.*
+*Note: The core CetinDB engine is currently in active development. The documentation below outlines the conceptual interface for integrators.*
 
 ### The CetinDB Core SDK
 When accessing the CetinDB network, developers will interact with our robust TypeScript interface:
 
 ```typescript
-import { CetinDB } from '@meforce/cetindb-core';
+import { CetinDB } from '@xertxetin/cetindb-core';
 
 // Initialize the edge engine
 const db = new CetinDB({
@@ -107,18 +107,18 @@ CetinDB enforces strict isolation between deployment stages:
 CetinDB utilizes a decentralized mesh of WebSocket Secure (WSS) relays to broker peer-to-peer connections and maintain asynchronous state. 
 
 **Important Note on Relays:**
-If you see community relays (such as `wss://relay.damus.io` or `wss://nos.lol`) in our boilerplate or demo applications, understand that they are configured **purely for educational and testing purposes**. MeForce Technology does not own, endorse, or guarantee the uptime of these third-party trackers. For production applications, we require developers to deploy and secure their own WSS relay infrastructure (using open-source Nostr-compliant relay software like `strfry`).
+If you see community relays (such as `wss://relay.damus.io` or `wss://nos.lol`) in our boilerplate or demo applications, understand that they are configured **purely for educational and testing purposes**. We do not own, endorse, or guarantee the uptime of these third-party trackers. For production applications, we require developers to deploy and secure their own WSS relay infrastructure (using open-source Nostr-compliant relay software like `strfry`).
 
 ---
 
 <div align="center">
-  <p><b>CetinDB</b> • Engineered with precision by <b>MeForce Technology</b>.</p>
+  <p><b>CetinDB</b> • Engineered with precision by <b>Mert Cetin</b>.</p>
   <p><i>Building the Unbreakable Mesh.</i></p>
   <br/>
   <p>
-    <a href="https://meforcetechnology.com"><b>Website</b></a> • 
+    <a href="https://github.com/xertxetin"><b>GitHub</b></a> • 
     <a href="https://x.com/xertxetin"><b>Twitter/X</b></a> • 
     <a href="https://www.instagram.com/xertxetin/"><b>Instagram</b></a> • 
-    <a href="https://www.meforcetechnology.com/cetindb/#/docs"><b>Documentation</b></a>
+    <a href="https://github.com/xertxetin/cetindb"><b>Documentation</b></a>
   </p>
 </div>
